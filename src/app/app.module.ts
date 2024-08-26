@@ -4,6 +4,8 @@ import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
+/*import { LoginPage } from './login/login.page';
+import { LoginPageRoutingModule } from './login/login-routing.module';*/
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
