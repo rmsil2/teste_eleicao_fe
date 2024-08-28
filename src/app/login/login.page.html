@@ -1,6 +1,18 @@
-<html>
+<ion-content padding>
  
-  <h3>Elei&ccedil;&atilde;o APP</h3>
+    <h3>Elei&ccedil;&atilde;o APP</h3>
     
-  <img src="assets/imgs/eleicaoapp.png" alt="logo">
-</html>
+    <img src="assets/imgs/eleicaoapp.png" alt="logo">
+
+    <form>
+        <ion-item>
+            <ion-input type="text" label="User:" value="user name"></ion-input>
+        </ion-item>
+        <ion-input type="password" label="Password:" value="password">
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+        <ion-button expand="block">Entrar</ion-button>
+    </form>
+    <ion-button expand="block" fill="outline">Registrar</ion-button>
+
+</ion-content>
