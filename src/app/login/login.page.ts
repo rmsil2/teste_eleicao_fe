@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NavController, MenuController } from '@ionic/angular';
 /*import { Component } from '@angular/core';*/
 
 @Component({
@@ -9,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+    constructor(public nav: NavController, private menu: MenuController) { this.menu.enable(false); }
+    abrirHome() {
+        this.nav.navigateForward('home'); this.menu.enable(true); 
+    }
+  fechaMenu() {
+      this.menu.enable(false); 
+  }
 
   ngOnInit() {
+ 
   }
 
 }
