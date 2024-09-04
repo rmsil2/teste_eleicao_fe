@@ -1,27 +1,33 @@
 <ion-app>
-    <ion-split-pane contentId="main-content">
-        <ion-menu contentId="main-content" type="overlay" disabled="false">
-            <ion-content>
-                <ion-list id="inbox-list">
-                    <ion-list-header>Elei&ccedil;&atilde;o APP</ion-list-header>
-                    <ion-note></ion-note>
-                    <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-                        <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-                            <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-                            <ion-label>{{ p.title }}</ion-label>
-                        </ion-item>
-                    </ion-menu-toggle>
-                </ion-list>
-                <ion-list id="labels-list">
-                    <ion-list-header>Labels</ion-list-header>
-                    <ion-item *ngFor="let label of labels" lines="none">
-                        <ion-icon aria-hidden="true" slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-                        <ion-label>{{ label }}</ion-label>
-                    </ion-item>
-                </ion-list>
-            </ion-content>
-        </ion-menu>
-        <ion-router-outlet id="main-content"></ion-router-outlet>
-    </ion-split-pane>
+    <ion-header [translucent]="true">
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            <ion-title>Elei&ccedil;&atilde;o APP</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-text color="tertiary">
+        <h3>Sobre Eleição</h3>
+            <img src="assets/imgs/eleicaoapp.png" alt="logo">
+            <p>As eleições no Brasil seguem um sistema democrático no qual os cidadãos escolhem seus representantes em níveis federal, estadual e municipal.
+            O país adota o voto obrigatório para todos os cidadãos alfabetizados com idades entre 18 e 70 anos.</p>
+            <p>
+                O sistema eleitoral inclui eleições para presidente, governadores, senadores, deputados federais e estaduais, e vereadores.
+
+                As eleições são realizadas a cada quatro anos. O processo presidencial, por exemplo, pode ter dois turnos se nenhum candidato alcançar mais de 50% dos
+                votos válidos no primeiro turno. Além disso, o sistema eleitoral brasileiro utiliza urnas eletrônicas, o que facilita a contagem rápida dos
+                votos e torna o processo mais seguro e transparente.
+            </p>
+
+            <p> eleição de 2022 foi particularmente importante, marcando a disputa entre o ex-presidente Luiz Inácio Lula da Silva e o então presidente Jair Bolsonaro. </p>
+
+     
+
+
+
+
+
+    </ion-text>
 </ion-app>
 

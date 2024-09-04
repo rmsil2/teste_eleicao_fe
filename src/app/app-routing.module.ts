@@ -11,9 +11,10 @@ const routes: Routes = [
     pathMatch: 'full'
 
   },
-  {path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)},
+  { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)},
   { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule) },
-  { path: 'folder/:id', loadChildren: () => import('./folder/folder.module').then(m => m.FolderPageModule) }
+  { path: 'folder/:id', loadChildren: () => import('./folder/folder.module').then(m => m.FolderPageModule) },
+  { path: 'categoria-pessoa', loadChildren: () => import('./pages/categoria-pessoa/categoria-pessoa.module').then( m => m.CategoriaPessoaPageModule)}
  
 ];
 
