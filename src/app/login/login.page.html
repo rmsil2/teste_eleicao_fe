@@ -6,9 +6,9 @@
 
     <form onload="fechaMenu()">
         <ion-item>
-            <ion-input type="text" label="User:" value="user name"></ion-input>
+            <ion-input [(ngModel)]="creds.nome" name="nome" type="text" label="User:" value="user name"></ion-input>
         </ion-item>
-        <ion-input type="password" label="Password:" value="password">
+        <ion-input [(ngModel)]="creds.senha" name="senha" type="password" label="Password:" value="password">
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
         </ion-input>
         <ion-button expand="block" (click)="abrirHome()">Entrar</ion-button>
