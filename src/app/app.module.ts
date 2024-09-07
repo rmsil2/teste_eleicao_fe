@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoriaPessoaService } from '../services/domain/categoriapessoa.service';
+import { ErrorInterceptorProvider } from '../interceptors/error-interceptor';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
@@ -15,7 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, HttpClientModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, CategoriaPessoaService],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, CategoriaPessoaService, ErrorInterceptorProvider],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
