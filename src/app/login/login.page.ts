@@ -24,7 +24,8 @@ export class LoginPage implements OnInit {
     abrirHome() {
         this.auth.authenticate(this.creds)
             .subscribe(response => {
-                console.log(response.headers.get('Authorization'))
+                //console.log(response.headers.get('Authorization'));
+                this.auth.successfulLogin(response.headers.get('Authorization'));
                 this.nav.navigateForward('home'); this.menu.enable(true); 
             },
             error => { }
