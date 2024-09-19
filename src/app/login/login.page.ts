@@ -21,6 +21,17 @@ export class LoginPage implements OnInit {
         this.menu.enable(false);
     }
 
+    ionViewDidEnter() {
+        this.auth.refreshToken()
+            .subscribe(response => {
+                //console.log(response.headers.get('Authorization'));
+                this.auth.successfulLogin(response.headers.get('Authorization'));
+                this.nav.navigateForward('home'); this.menu.enable(true);
+            },
+            error => { }
+            )
+    }
+
     abrirHome() {
         this.auth.authenticate(this.creds)
             .subscribe(response => {
