@@ -12,15 +12,16 @@ export class AppComponent {
     public appPages = [
         { title: 'Home', url: 'home', icon: 'home' },
         { title: 'Categoria Pessoa', url: 'categoria-pessoa', icon: 'build' },
-        { title: 'Demandas', url: 'folder/Demandas', icon: 'paper-plane' },
-        { title: 'Atividades', url: 'folder/Atividades', icon: 'heart' },
-        { title: 'Archived', url: 'folder/archived', icon: 'archive' },
-        { title: 'Trash', url: 'folder/trash', icon: 'trash' },
+        { title: 'Categoria Atividade', url: 'folder/Demandas', icon: 'paper-plane' },
+        { title: 'Demandas', url: 'folder/archived', icon: 'archive' },
+        { title: 'Atividade', url: 'folder/trash', icon: 'trash' },
         { title: 'Atenção', url: 'login', icon: 'warning' },
     ];
 
     public appPages2 = [
-        { title: 'Sair', icon: 'log-out', component: '' },
+        { title: 'Pessoas', icon: 'heart', component: '' },
+        { title: 'Usuarios', icon: 'log-in', component: ''},
+        { title: 'Sair', icon: 'log-out', component: '' }
     ];
 
     public labels = ['Logout', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
@@ -33,6 +34,14 @@ export class AppComponent {
                 this.authService.logout();
                 this.menu.enable(false);
                 this.nav.navigateForward('login'); 
+                break;
+
+            case 'Usuarios':
+                this.nav.navigateForward('usuario');
+                break;
+
+            case 'Pessoas':
+                this.nav.navigateForward('pessoa');
                 break;
 
             default:

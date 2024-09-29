@@ -14,7 +14,9 @@ const routes: Routes = [
   { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)},
   { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule) },
   { path: 'folder/:id', loadChildren: () => import('./folder/folder.module').then(m => m.FolderPageModule) },
-  { path: 'categoria-pessoa', loadChildren: () => import('./pages/categoria-pessoa/categoria-pessoa.module').then( m => m.CategoriaPessoaPageModule)}
+  { path: 'categoria-pessoa', loadChildren: () => import('./pages/categoria-pessoa/categoria-pessoa.module').then( m => m.CategoriaPessoaPageModule)},
+  { path: 'pessoa', loadChildren: () => import('./pages/pessoa/pessoa.module').then( m => m.PessoaPageModule)},
+  { path: 'usuario', loadChildren: () => import('./pages/usuario/usuario.module').then( m => m.UsuarioPageModule)}
  
 ];
 

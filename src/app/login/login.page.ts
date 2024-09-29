@@ -48,6 +48,10 @@ export class LoginPage implements OnInit {
       this.menu.enable(false); 
   }
 
+  signup() {
+      this.nav.navigateForward('usuario');
+  }
+
   ngOnInit() {
  
   }
